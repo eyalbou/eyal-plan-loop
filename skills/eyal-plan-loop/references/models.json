@@ -1,0 +1,36 @@
+{
+  "updated": "2026-09-16",
+  "note": "Curated Task slugs. Bump this file + VERSION when the host roster changes. The skill cannot scrape the UI picker. Never invent a slug that is not listed for this host.",
+  "hosts": {
+    "cursor": {
+      "models": [
+        {
+          "id": "gpt-5.6-sol-high",
+          "label": "GPT-5.6"
+        },
+        {
+          "id": "claude-opus-5-thinking-high",
+          "label": "Claude Opus"
+        },
+        {
+          "id": "cursor-grok-4.6-high",
+          "label": "Grok 4.6"
+        },
+        {
+          "id": "composer-2.5",
+          "label": "Composer"
+        }
+      ],
+      "suggest_when_host_contains": {
+        "grok": "gpt-5.6-sol-high",
+        "gpt": "cursor-grok-4.6-high",
+        "claude": "gpt-5.6-sol-high",
+        "composer": "gpt-5.6-sol-high"
+      }
+    },
+    "claude-code": {
+      "models": [],
+      "note": "Shipped list starts empty. Merge python3 scripts/config.py get -> claude_code_models (ids the user named on prior CC runs) plus any model ids advertised in the current session. After they pick, add-claude-model. Still ban inherit and the host model. Do not copy Cursor slugs unless this host documents them."
+    }
+  }
+}
